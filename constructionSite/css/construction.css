@@ -1,0 +1,100 @@
+body {
+    background: #26ADE4;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.main_wrapper {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -137px;
+	width:600px;
+}
+
+
+h1 {
+	color: #FFFFFF;
+	letter-spacing: 0.1em;
+	font-size: 3em;
+	text-align: center;
+}
+
+/* Everything Here positions the Gears! Tweak the nth child elements to position each gear. Position the wrapper to move them all! */
+.gear_wrapper {
+	position: relative;
+	margin: auto;
+	
+	width:212px;
+	height: 100px;
+}
+
+
+.gear_wrapper img {
+	position: relative;
+}
+
+
+.gear_wrapper img:nth-child(1n) {
+	top: 21px;
+	left: 7px;
+	-webkit-animation: spin-clock 3s linear infinite;
+	-moz-animation: spin-clock 3s linear infinite;
+	-o-animation: spin-clock 3s linear infinite;
+	animation: spin-clock 3s linear infinite;
+}
+
+.gear_wrapper img:nth-child(2n) {
+	top: 4px;
+	left: -1px;
+	 -webkit-animation: spin-count-clock 3s linear infinite;
+	 -moz-animation: spin-count-clock 3s linear infinite;
+	-o-animation: spin-count-clock 3s linear infinite;
+	animation: spin-count-clock 3s linear infinite;
+}
+
+.gear_wrapper img:nth-child(3n) {
+	top: 21px;
+	left: -9px;
+	-webkit-animation: spin-clock 3s linear infinite;
+		-moz-animation: spin-clock 3s linear infinite;
+	-o-animation: spin-clock 3s linear infinite;
+	animation: spin-clock 3s linear infinite;
+}
+
+
+/* keyframes */
+
+@-webkit-keyframes spin-clock {
+    100% {-webkit-transform: rotate(360deg)}
+}
+
+@-moz-keyframes spin-clock {
+    100% {-moz-transform: rotate(360deg)}
+}
+
+@-o-keyframes spin-clock {
+    100% {-o-transform: rotate(360deg)}
+}
+
+@keyframes spin-clock {
+    100% {transform: rotate(360deg)}
+}
+
+@-webkit-keyframes spin-count-clock {
+    100% {-webkit-transform: rotate(-360deg)}
+}
+
+@-moz-keyframes spin-count-clock {
+    100% {-moz-transform: rotate(-360deg)}
+}
+
+@-o-keyframes spin-count-clock {
+    100% {-o-transform: rotate(-360deg)}
+}
+
+@keyframes spin-count-clock {
+    100% {transform: rotate(-360deg)}
+}
+
+
