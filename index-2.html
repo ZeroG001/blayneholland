@@ -14,7 +14,7 @@
 	<body>
 		<div class="section-1">
 			<div class="title-wrapper">
-				<h1 class="main-header"> Blayne Holland </h1>
+				<h1 class="main-header"> Test 1 </h1>
 				<h5 class="main-subheader"> Scroll down to find out more about me! </h5>
 			</div>
 
@@ -40,7 +40,10 @@ $('body').scrollTop(0);
 
 			var sectionTwoOffset = $('.section-2').offset();
 
-			$('body').scrollTop( sectionTwoOffset.top );
+
+			$('body, html').animate({
+				scrollTop: sectionTwoOffset.top
+			});
 
 		});
 
