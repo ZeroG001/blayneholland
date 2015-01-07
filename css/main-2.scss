@@ -3,16 +3,55 @@ body {
 	background-color: #F8F4E4;
 }
 
+
+/* =========== SECTION 1 STYLES ================== */
+
+.main-navigation {
+
+	
+	margin: 0px auto;
+	display: block;
+	width: 415px;
+	margin: auto;
+	bottom: 100%;
+	
+	a {
+		width: 50px;
+		height: 20px;
+		color: white;
+		border: 1px solid black;
+		padding: 10px;
+		font-size: 2em;
+		margin: 0px;
+	}	
+}
+
 .section-1 {
 	margin: 0px;
 	background-color: #0CA5B0;
 	height: 600px;
+	width: 100%;
 
 }
 
 .section-2 {
-	height: 9000px;
+	height: 1000px;
 }
+
+.section-3 {
+	height: 1000px;
+}
+
+
+.section-4 {
+	height: 1000px;
+}
+
+.section-5 {
+	height: 1000px;
+}
+
+
 
 .title-wrapper {
 	position: relative;
@@ -45,13 +84,27 @@ body {
 	margin: 0px auto;
 }
 
-.arrow {
-	display: inline-block;
-	position: relative;
-	width: 200px;
-	
-	right: 0;
-	bottom: 0;
+.arrow { 
 
+	display: inline-block;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+
+	-webkit-transform: translate(-50px, -50px);
+	-moz-transform: translate(-50px, -50px);
+
+      top: 100%;
+      left: 100%;
+
+
+	font-size: 3em;
+	color: white;
+
+	background-color: rgba(255,255,255,0.5);
 	
+	&:hover {
+		color: rgba(255,255,255,0.7)
+	}
+
 }

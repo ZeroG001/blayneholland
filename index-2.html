@@ -13,16 +13,40 @@
 
 	<body>
 		<div class="section-1">
+
 			<div class="title-wrapper">
-				<h1 class="main-header"> Test 1 </h1>
+				<h1 class="main-header"> Blayne Holland </h1>
 				<h5 class="main-subheader"> Scroll down to find out more about me! </h5>
 			</div>
 
-			<div class="arrow"><h1>Scroll down</h1></div>
+			
+			<nav class="main-navigation">
+				<a class="" href="">Section3</a>
+				<a class="" href="">Section4</a>
+				<a class="" href="">Section5</a>
+			</nav>
+
+
+			<div class="arrow">
+				<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+			</div>
 
 		</div>
-
+		
 		<div class="section-2">
+			<h1> This is section 2 with the cool text and what note. I I think this site is going to really turn out the way I want it.
+		</div>
+
+		<div class="section-3">
+			<h1> This is section 2 with the cool text and what note. I I think this site is going to really turn out the way I want it.
+		</div>
+
+		<div class="section-4">
+			<h1> This is section 2 with the cool text and what note. I I think this site is going to really turn out the way I want it.
+		</div>
+
+
+		<div class="section-4">
 			<h1> This is section 2 with the cool text and what note. I I think this site is going to really turn out the way I want it.
 		</div>
 	</body>
@@ -31,25 +55,24 @@
 
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
+
 	(function(jQuery){
 
-$('body').scrollTop(0);
-
-		$('.arrow').click(function(){
-
-
-			var sectionTwoOffset = $('.section-2').offset();
-
-
-			$('body, html').animate({
-				scrollTop: sectionTwoOffset.top
-			});
-
-		});
+		$('body, html').scrollTop(0);
 
 		var windowHeight = $( window ).height();
 
 		$('.section-1').css('height', windowHeight);
-		alert($('.section-2').offset().top);
+		$('.arrow').css('bottom', '40%');
+
+
+		$('.arrow').click(function(){
+			var sectionTwoOffset = $(this).offset();
+			$('body, html').animate({
+				scrollTop: sectionTwoOffset.top
+			});
+		});
+
 	})($)
+
 </script>
