@@ -70,8 +70,13 @@ body {
   font-size: 3em;
   color: white;
   background-color: rgba(255, 255, 255, 0.5); }
+  .arrow span {
+    -webkit-transition: 0.5s ease; }
   .arrow:hover {
     color: rgba(255, 255, 255, 0.7); }
 
 .arrow_down {
-  coloe: blue; }
+  color: blue;
+  -webkit-transition: 0.5s ease;
+  -webkit-transform: rotateZ(180deg);
+  -webkit-transform-origin: center center; }

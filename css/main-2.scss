@@ -103,6 +103,10 @@ body {
 	color: white;
 
 	background-color: rgba(255,255,255,0.5);
+
+	span {
+	-webkit-transition: 0.5s ease;
+	}
 	
 	&:hover {
 		color: rgba(255,255,255,0.7)
@@ -112,6 +116,9 @@ body {
 
 .arrow_down { 
 
-	coloe: blue;
+	color: blue;
+	-webkit-transition: 0.5s ease;
+	-webkit-transform: rotateZ(180deg);
+	-webkit-transform-origin: center center;
 
 }
