@@ -71,12 +71,13 @@ body {
   color: white;
   background-color: rgba(255, 255, 255, 0.5); }
   .arrow span {
-    -webkit-transition: 0.5s ease; }
+    -webkit-transition: transform 0.5s ease; }
   .arrow:hover {
     color: rgba(255, 255, 255, 0.7); }
 
 .arrow_down {
   color: blue;
-  -webkit-transition: 0.5s ease;
   -webkit-transform: rotateZ(180deg);
-  -webkit-transform-origin: center center; }
+  -webkit-transform-origin: center center;
+  -moz-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg); }

@@ -8,81 +8,115 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/main-2.css">
 	</head>
 
 	<body>
+		<div class="section-1">
 
-	<!-- Hidden on certain screen widths -->
-	<div class="row content-header">
+			<div class="title-wrapper">
+				<h1 class="main-header"> Blayne Holland </h1>
+				<h5 class="main-subheader"> Scroll down to find out more about me! </h5>
+			</div>
 
-		<div class="content-container">
 			
-			<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
-				<h1 class="main-header-name"> Blayne Holland </h1>
-				<h4 class="main-header-detail"> Web Developer / Systems Administrator </h4>
+			<nav class="main-navigation">
+				<a class="nav-about" href="">About</a>
+				<a class="nav-work" href="">Recent Work</a>
+				<a class="nav-contact" href="">Contact</a>
+			</nav>
+
+
+			<div class="arrow">
+				<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
 			</div>
 
-			<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
-				<nav class="main-header-navigation">
-					<a href="#"> Home </a>
-					<a href="#"> Resume </a>
-					<a href="#"> Contact </a>
-				</nav>
-			</div>
-
-		</div> <!-- emd container -->
-	</div>
-
-	<div class="row content-body">
-
-		<div class="content-container">
-			<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
-				<div class="image-wrapper">
-					<img id="photo-of-me" class="img-responsive" src="img/woody.jpg" alt="Blayne H.">
-				</div>
-			</div>
-
-			<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
-				<div class="about-blayne">
-					<h2 class="intro-header">A little about me:</h2>
-
-				<!-- Links Added some extra padding for links to have no gutters -->
-					<div class="row no-gutters">
-
-						<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
-							<div> <a class="body-link-resume" href="">Resume</a> </div>
-						</div>
-
-						<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
-							<div> <a class="body-link-work" href="">Recent work</a> </div>
-						</div>					
-					</div> <!-- Clickable links end -->
-
-					<p> I am an IT support technician tured web developer that would like to get my career of the ground. I may not have the raw talent , but I...Uh...got the sauce </p>
-
-				</div> <!-- About me section end -->
-
-			</div> <!-- Links and about me section end  -->
-
-		</div> <!-- Body container end -->
-
-	</div> <!-- Body Content end -->
-
-
-	<div class="row content-footer">
-
-		<div class="content-container">
-			<img src="" alt="icon" />
-			<span> words </span>
+		</div>
+		
+		<div class="section-2">
+			<h1> This is section 2 with the cool text and what note. I I think this site is going to really turn out the way I want it.
 		</div>
 
-	</div>
+		<div class="section-3">
+			<h1> This is section 2 with the cool text and what note. I I think this site is going to really turn out the way I want it.
+		</div>
 
-	<!-- First half of about be row showimg my image -->	
+		<div class="section-4">
+			<h1> This is section 2 with the cool text and what note. I I think this site is going to really turn out the way I want it.
+		</div>
 
-	<!-- Second half of the about me page showin the description -->
+
+		<div class="section-5">
+			<h1> This is section 2 with the cool text and what note. I I think this site is going to really turn out the way I want it.
+		</div>
 
 	</body>
 
 </html>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+	(function(jQuery){
+
+		//When user refreshes page. They are brought to top.
+		$('body, html').scrollTop(0);
+
+
+		var windowHeight = $( window ).height();
+
+		$('.section-1').css('height', windowHeight);
+
+		// Scroll to function. Upon clicking a link. You will scroll to a particular section of the page.
+		$.fn.scrollTo = function( ele ) {
+
+			$(this).click(function( event ){
+
+				event.preventDefault();
+
+				var elementOffset = $(ele).offset().top;
+				$('body, html').animate({
+		 			scrollTop: elementOffset
+				});
+			});
+		}
+
+		// When link or element is clicked, then ScrollTo the specified element.
+		$('.arrow').scrollTo('.section-2');
+		$('.nav-about').scrollTo('.section-3');
+		$('.nav-work').scrollTo('.section-4');
+		$('.nav-contact').scrollTo('.section-5');
+
+
+
+var windw = this;
+		$.fn.followTo = function ( pos ) {
+    var $this = this,
+        $window = $(windw);
+    
+    $window.scroll(function(e){
+        if ($window.scrollTop() > pos) {
+            $this.css({
+                position: 'fixed',
+                'top': '5%'
+            });
+
+            $('.glyphicon-chevron-down').addClass('arrow_down');
+        } else {
+            $this.css({
+                position: 'absolute',
+                top: '100%'    
+            });
+
+            $('.glyphicon-chevron-down').removeClass('arrow_down')
+        }
+    });
+};
+
+var sectionTwoOffset = $('.section-2').offset().top;
+
+$('.arrow').followTo(sectionTwoOffset - 50);
+
+	})($) //Jquery. Self initializing function end
+
+</script>
