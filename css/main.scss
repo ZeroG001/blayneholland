@@ -39,6 +39,24 @@ body {
 	top:50%;
 }
 
+.main-header {
+	
+	position: relative; 
+	margin: 0px 0px 5px 0px;
+	text-align: center;
+	border: 5px solid rgb(254,254,235);
+	padding: 10px;
+
+
+	color: rgb(254,254,235);
+}
+
+.main-subheader {
+	text-align: center;
+	color: white;
+}
+
+
 .main-navigation {
 
 	position: absolute;
@@ -55,8 +73,7 @@ body {
 		padding: 10px;
 		width: 50px;
 		height: 40px;
-		color: white;
-		background-color: rgba(78,63,48,0.6);
+		color: rgb(254,254,235);
 		font-size: 2em;
 		margin: 0px;
 
@@ -73,22 +90,19 @@ body {
 	height: 50px;
 	width: 50px;
 
+    top: 100%;
+    left: 100%;
+
+	font-size: 3em;
+	color: rgb(254,254,235);
+
 	-webkit-transform: translate(-50px, -50px);
 	-moz-transform: translate(-50px, -50px);
 	transform: translate(-50px, -50px);
 
-      top: 100%;
-      left: 100%;
-
-
-	font-size: 3em;
-	color: white;
-
-	background-color: rgba(255,255,255,0.5);
 
 	span {
 	-webkit-transition: transform 0.5s ease;
-	
 	}
 	
 	&:hover {
@@ -121,28 +135,9 @@ body {
 
 
 
-.main-header {
-	
-	position: relative; 
-	margin: 0px 0px 5px 0px;
-	text-align: center;
-	border: 5px solid white;
-	padding: 10px;
-
-
-	color: white;
-}
-
-.main-subheader {
-	text-align: center;
-	color: white;
-}
-
-
-
 .arrow_down { 
 
-	color: blue;
+	color: rgb(78,63,48);
 	-webkit-transform: rotateZ(180deg);
 	-webkit-transform-origin: center center;
 
