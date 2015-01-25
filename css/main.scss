@@ -180,5 +180,21 @@ body {
 /* media queries */
 
 @media screen and (max-width: 766px) {
-	.title-wrapper {width: 100%;}
+	.title-wrapper {
+
+		width: 100%;
+	}
+
+	.main-navigation {
+	
+		a {
+			display: block;
+		}
+
+		.arrow {
+			display: none;
+		}
+
+	}
+
 }
