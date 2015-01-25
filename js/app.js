@@ -7,7 +7,8 @@
 
 		//==================================
 
-		$('.section-1').css('height', windowHeight);
+		// Make section1 height the same height as viewport. the vw css measurement does the same thing
+		// $('.section-1').css('height', windowHeight);
 
 
 
@@ -30,49 +31,59 @@
 
 		// Have the arrow follow the user after a certain position
 		var windw = this;
-				$.fn.followTo = function ( pos ) {
-		    var $this = this,
-		        $window = $(windw);
-		    
+
+		$.fn.arrowFollow = function () {
+		    var $this = this;		        
+		    var $window = $(windw);
+
 		    $window.scroll(function(e){
-		        if ($window.scrollTop() > pos) {
+
+		    	//Get the bottom offset of section 1
+		    	bottom = $('.section-1').height() - $('.section-1').offset().top;
+
+
+		    	var section_bottom = bottom - 45
+
+		        if ($window.scrollTop() > section_bottom) {
 		            $this.css({
 		                position: 'fixed',
-		                'top': '5%'
+
 		            });
 
-		            $('.glyphicon-chevron-down').addClass('arrow_down');
+		            $('.arrow').addClass('arrow_up');
 		        } else {
+
 		            $this.css({
 		                position: 'absolute',
-		                top: '100%'    
+		                top: '0'
+
 		            });
 
-		            $('.glyphicon-chevron-down').removeClass('arrow_down');
+		            $('.arrow').removeClass('arrow_up');
 		        }
 		    });
 		};
 
-		//======================================================
-
-		var sectionTwoOffset = $('.section-2').offset().top;
-		$('.arrow').followTo(sectionTwoOffset - 50);
 		
 
+		//======================================================
+		var sectionTwoOffset = $('.section-2').offset().top;
+
+		$( window ).resize(function(){
+				sectionTwoOffset = $('.section-2').offset().top;		
+			});
+
+		 $('.arrow').arrowFollow();
 		
 
 		
 
 		// When link or element is clicked, then ScrollTo the specified element.
 		$('.arrow').scrollTo('.section-2');
-		$('.nav-about').scrollTo('.section-3');
-		$('.nav-work').scrollTo('.section-4');
-		$('.nav-contact').scrollTo('.section-5');
-
-
-
-
-
+		$('.arrow .arrow_up').scrollTo('section-1');
+		$('.nav-about').scrollTo('.section-2');
+		$('.nav-work').scrollTo('.section-3');
+		$('.nav-contact').scrollTo('.section-4');
 
 
 

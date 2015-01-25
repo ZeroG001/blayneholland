@@ -6,35 +6,35 @@ body {
 .section-1 {
   margin: 0px;
   background-color: #0CA5B0;
-  height: 600px;
+  height: 100vh;
+  min-height: 700px;
   width: 100%;
   position: relative;
-  background-image: url("../img/green_pentagon.png");
+  background-image: linear-gradient(rgba(12, 165, 176, 0.6), rgba(12, 165, 176, 0.6)), url("../img/green_pentagon.png");
   background-attachment: fixed; }
 
+/* This section was removed because the gradient does the same thing
 .section-1::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  background-color: rgba(12, 165, 176, 0.6);
-  height: inherit;
-  width: inherit; }
-
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-color: rgba(12,165,176,0.6);
+	height: inherit;
+	width: inherit;
+}
+*/
 .title-wrapper {
-  width: 900px;
+  width: 70%;
   margin: 0px auto;
   position: relative;
-  webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  top: 50%; }
+  top: 30%; }
 
 .main-header {
   position: relative;
   margin: 0px 0px 5px 0px;
   text-align: center;
   border: 5px solid #fefeeb;
-  padding: 10px;
+  padding: 30px 0px;
   color: #fefeeb; }
 
 .main-subheader {
@@ -43,35 +43,36 @@ body {
 
 .main-navigation {
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   margin: 0px auto;
-  padding: 7px;
+  padding: 20px;
   width: 100%; }
   .main-navigation a {
     position: relative;
     padding: 10px;
-    width: 50px;
-    height: 40px;
+    width: 300px;
     color: #fefeeb;
     font-size: 2em;
     margin: 0px; }
     .main-navigation a:hover {
+      text-decoration: none;
+      border-radius: 15px;
+      background-color: rgba(254, 254, 235, 0.5);
+      color: #4e3f30;
+      -webkit-transition: .3s ease; }
+    .main-navigation a:link {
       text-decoration: none; }
 
 .arrow {
   display: inline-block;
   position: absolute;
-  height: 50px;
-  width: 50px;
-  top: 100%;
-  left: 100%;
+  right: 20px;
+  padding: 20px;
   font-size: 3em;
   color: #fefeeb;
-  -webkit-transform: translate(-50px, -50px);
-  -moz-transform: translate(-50px, -50px);
-  transform: translate(-50px, -50px); }
-  .arrow span {
-    -webkit-transition: transform 0.5s ease; }
+  /* animations */
+  -webkit-transition: 0.5s ease;
+  -webkit-transform-origin: 50% 50%; }
   .arrow:hover {
     color: rgba(255, 255, 255, 0.7); }
 
@@ -88,14 +89,19 @@ body {
 .section-5 {
   height: 1000px; }
 
-.arrow_down {
+.arrow_up {
   color: #4e3f30;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  transition: 0.5s ease;
   -webkit-transform: rotateZ(180deg);
-  -webkit-transform-origin: center center;
   -moz-transform: rotateZ(180deg);
-  -moz-transform-origin: center center;
   transform: rotateZ(180deg);
-  transform-origin: center center; }
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
+  .arrow_up:hover {
+    color: #807162; }
 
 /* Keyfram animations 
 
@@ -106,3 +112,7 @@ body {
 }
 
 */
+/* media queries */
+@media screen and (max-width: 766px) {
+  .title-wrapper {
+    width: 100%; } }
