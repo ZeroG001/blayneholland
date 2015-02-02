@@ -77,16 +77,38 @@ body {
     color: rgba(255, 255, 255, 0.7); }
 
 /* =========== End Section 1 ================ */
+/* ============= Section 2 Styles ===================== */
 .section-2 {
   height: 1000px;
   padding: 50px 100px;
   font-size: 2em; }
 
+.resume-link {
+  color: #0ca5b0;
+  border: 5px solid #0ca5b0;
+  padding: 10px;
+  border-radius: 20px; }
+  .resume-link:hover {
+    text-decoration: none;
+    color: #34cdd8; }
+
+/* =================== End Section 2 ========================= */
+/* ============== Section 3 Styles ================== */
 .section-3 {
   height: 1000px;
   padding: 50px 100px;
-  font-size: 2em; }
+  font-size: 1.5em; }
 
+.project-item {
+  margin-top: 100px;
+  border-top: 1px solid black;
+  padding: 50px; }
+
+img {
+  width: 500px;
+  height: 500px; }
+
+/* ================ Section 3 Styles End ============== */
 .section-4 {
   height: 1000px;
   padding: 50px 100px;
