@@ -57,13 +57,13 @@ body {
     .main-navigation a:hover {
       text-decoration: none;
       border-radius: 15px;
-      background-color: rgba(254, 254, 235, 0.5);
+      background-color: rgba(254, 254, 235, 0.6);
       color: #4e3f30;
       -webkit-transition: .3s ease; }
     .main-navigation a:link {
       text-decoration: none; }
 
-.arrow {
+.arrow_down {
   display: inline-block;
   position: absolute;
   right: 20px;
@@ -73,46 +73,8 @@ body {
   /* animations */
   -webkit-transition: 0.5s ease;
   -webkit-transform-origin: 50% 50%; }
-  .arrow:hover {
-    color: rgba(255, 255, 255, 0.7); }
-
-/* =========== End Section 1 ================ */
-/* ============= Section 2 Styles ===================== */
-.section-2 {
-  height: 1000px;
-  padding: 50px 100px;
-  font-size: 2em; }
-
-.resume-link {
-  color: #0ca5b0;
-  border: 5px solid #0ca5b0;
-  padding: 10px;
-  border-radius: 20px; }
-  .resume-link:hover {
-    text-decoration: none;
-    color: #34cdd8; }
-
-/* =================== End Section 2 ========================= */
-/* ============== Section 3 Styles ================== */
-.section-3 {
-  height: 1000px;
-  padding: 50px 100px;
-  font-size: 1.5em; }
-
-.project-item {
-  margin-top: 100px;
-  border-top: 1px solid black;
-  padding: 50px; }
-
-img {
-  width: 500px;
-  height: 500px; }
-
-/* ================ Section 3 Styles End ============== */
-.section-4 {
-  height: 1000px;
-  padding: 50px 100px;
-  font-size: 2em; }
+  .arrow_down:hover {
+    color: rgba(255, 255, 255, 0.6); }
 
 .arrow_up {
   color: #4e3f30;
@@ -127,6 +89,58 @@ img {
   transform-origin: 50% 50%; }
   .arrow_up:hover {
     color: #807162; }
+
+/* =========== End Section 1 ================ */
+/* ============= Section 2 Styles ===================== */
+.section-2 {
+  position: relative;
+  height: 1000px;
+  padding: 50px 0px;
+  font-size: 1em; }
+  .section-2 h1 {
+    padding: 0px 15px; }
+
+.resume-link {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 200px;
+  color: #0ca5b0;
+  border: 5px solid #0ca5b0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.5em; }
+  .resume-link:hover {
+    text-decoration: none;
+    color: #34cdd8; }
+
+/* =================== End Section 2 ========================= */
+/* ============== Section 3 Styles ================== */
+.section-3 {
+  height: 1000px;
+  padding: 50px 0px;
+  font-size: 1.5em; }
+  .section-3 h1 {
+    padding: 0px 15px; }
+
+.project-item {
+  overflow: hidden; }
+  .project-item:hover > .project-item-description {
+    background-color: rgba(78, 63, 48, 0.9);
+    color: #FEFEEB;
+    padding: 5px;
+    -webkit-transition: 0.5s ease;
+    -webkit-transform: translateY(-100%); }
+
+.project-item-description {
+  position: absolute;
+  padding: 5px; }
+
+/* ================ Section 3 Styles End ============== */
+.section-4 {
+  height: 1000px;
+  padding: 50px 100px;
+  font-size: 2em; }
 
 /* Keyfram animations 
 

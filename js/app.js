@@ -50,7 +50,7 @@
 
 		            });
 
-		            $('.arrow').addClass('arrow_up');
+		            $('.arrow_down').addClass('arrow_up');
 		        } else {
 
 		            $this.css({
@@ -59,7 +59,7 @@
 
 		            });
 
-		            $('.arrow').removeClass('arrow_up');
+		            $('.arrow_down').removeClass('arrow_up');
 		        }
 		    });
 		};
@@ -73,14 +73,14 @@
 				sectionTwoOffset = $('.section-2').offset().top;		
 			});
 
-		 $('.arrow').arrowFollow();
+		 $('.arrow_down').arrowFollow();
 		
 
 		
 
 		// When link or element is clicked, then ScrollTo the specified element.
-		$('.arrow').scrollTo('.section-2');
-		$('.arrow .arrow_up').scrollTo('section-1');
+		$('.arrow_down').scrollTo('.section-2');
+		$('.arrow_down .arrow_up').scrollTo('section-1');
 		$('.nav-about').scrollTo('.section-2');
 		$('.nav-work').scrollTo('.section-3');
 		$('.nav-contact').scrollTo('.section-4');
