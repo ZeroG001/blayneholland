@@ -114,6 +114,8 @@ body {
 	-webkit-transition: 0.5s ease;
 
 	-webkit-transform-origin: 50% 50%;
+
+	z-index: 100;
 	
 	&:hover {
 		color: rgba(255,255,255,0.6);
@@ -148,12 +150,15 @@ body {
 /* ============= Section 2 Styles ===================== */
 .section-2 {
 	position: relative;
-	height: 1000px;
 	padding: 50px 0px;
 	font-size: 1em;
 
 	h1 {
-		padding: 0px 15px;
+		display: block;
+		width: 200px;
+		padding: 10px;
+		border-bottom: 5px solid #0ca5b0;
+		margin-bottom: 50px;
 	}
 }
 
@@ -179,28 +184,38 @@ body {
 /* =================== End Section 2 ========================= */
 
 
-/* ============== Section 3 Styles ================== */
+/* ============== Section 3 Styles Projects ================== */
 
 .section-3 {
-	height: 1000px;
+	height: 500px;
 	padding: 50px 0px;
 	font-size: 1.5em;
 
 
 
 	h1 {
-		padding: 0px 15px;
+		display: block;
+		width: 300px;
+		padding: 10px;
+		border-bottom: 5px solid #0ca5b0;
+		margin-bottom: 50px;
 	}
 }
 
 .project-item {
-	 overflow: hidden;
+
+	overflow: hidden;
+	position: relative;
+	display: block;
+
+	img {
+		position: relative;
+	}
 
 	&:hover > .project-item-description {
+
 		background-color: rgba(78,63,48,0.9);
 		color: #FEFEEB;
-
-		padding: 5px;
 
 		-webkit-transition: 0.5s ease;
 		-webkit-transform: translateY(-100%);
@@ -210,8 +225,25 @@ body {
 }
 
 .project-item-description {
-	position: absolute;
-	padding: 5px;
+	
+	/* important attributes */
+	width: -webkit-calc(100% - 30px);
+	width: -moz-calc(100% - 30px);
+	width: -o-calc(100% - 30px);
+	width: calc(100% - 30px);
+	position: absolute; 
+	box-sizing: border-box;
+	margin-left: 15px;
+	left:0px;
+    right: 0px;
+
+	padding: 20px;
+	height: 100%;
+
+
+	p {
+		font-size: 2rem;
+	}
 }
 
 
@@ -237,7 +269,7 @@ body {
 
 */
 
-/* media queries */
+/* ==================== Media Queries ==================== */
 
 @media screen and (max-width: 766px) {
 	.title-wrapper {
@@ -251,7 +283,7 @@ body {
 			display: block;
 		}
 
-		.arrow {
+		.arrow_down {
 			display: none;
 		}
 

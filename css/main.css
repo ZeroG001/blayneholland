@@ -72,7 +72,8 @@ body {
   color: #fefeeb;
   /* animations */
   -webkit-transition: 0.5s ease;
-  -webkit-transform-origin: 50% 50%; }
+  -webkit-transform-origin: 50% 50%;
+  z-index: 100; }
   .arrow_down:hover {
     color: rgba(255, 255, 255, 0.6); }
 
@@ -94,11 +95,14 @@ body {
 /* ============= Section 2 Styles ===================== */
 .section-2 {
   position: relative;
-  height: 1000px;
   padding: 50px 0px;
   font-size: 1em; }
   .section-2 h1 {
-    padding: 0px 15px; }
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border-bottom: 5px solid #0ca5b0;
+    margin-bottom: 50px; }
 
 .resume-link {
   position: relative;
@@ -115,26 +119,45 @@ body {
     color: #34cdd8; }
 
 /* =================== End Section 2 ========================= */
-/* ============== Section 3 Styles ================== */
+/* ============== Section 3 Styles Projects ================== */
 .section-3 {
-  height: 1000px;
+  height: 500px;
   padding: 50px 0px;
   font-size: 1.5em; }
   .section-3 h1 {
-    padding: 0px 15px; }
+    display: block;
+    width: 300px;
+    padding: 10px;
+    border-bottom: 5px solid #0ca5b0;
+    margin-bottom: 50px; }
 
 .project-item {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  display: block; }
+  .project-item img {
+    position: relative; }
   .project-item:hover > .project-item-description {
     background-color: rgba(78, 63, 48, 0.9);
     color: #FEFEEB;
-    padding: 5px;
     -webkit-transition: 0.5s ease;
     -webkit-transform: translateY(-100%); }
 
 .project-item-description {
+  /* important attributes */
+  width: -webkit-calc(100% - 30px);
+  width: -moz-calc(100% - 30px);
+  width: -o-calc(100% - 30px);
+  width: calc(100% - 30px);
   position: absolute;
-  padding: 5px; }
+  box-sizing: border-box;
+  margin-left: 15px;
+  left: 0px;
+  right: 0px;
+  padding: 20px;
+  height: 100%; }
+  .project-item-description p {
+    font-size: 2rem; }
 
 /* ================ Section 3 Styles End ============== */
 .section-4 {
@@ -151,12 +174,12 @@ body {
 }
 
 */
-/* media queries */
+/* ==================== Media Queries ==================== */
 @media screen and (max-width: 766px) {
   .title-wrapper {
     width: 100%; }
 
   .main-navigation a {
     display: block; }
-  .main-navigation .arrow {
+  .main-navigation .arrow_down {
     display: none; } }
