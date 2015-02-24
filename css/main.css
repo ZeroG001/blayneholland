@@ -112,7 +112,6 @@ body {
   color: #0ca5b0;
   border: 5px solid #0ca5b0;
   padding: 10px;
-  border-radius: 10px;
   font-size: 1.5em; }
   .resume-link:hover {
     text-decoration: none;
@@ -157,7 +156,12 @@ body {
   padding: 20px;
   height: 100%; }
   .project-item-description p {
-    font-size: 2rem; }
+    font-size: 1.5rem; }
+  .project-item-description center {
+    padding-top: 30px; }
+  .project-item-description center a {
+    border: 2px solid #FEFEEB;
+    padding: 10px; }
 
 /* ================ Section 3 Styles End ============== */
 .section-4 {
@@ -183,3 +187,6 @@ body {
     display: block; }
   .main-navigation .arrow_down {
     display: none; } }
+@media screen and (max-width: 991px) {
+  .project-item {
+    margin-top: 30px; } }

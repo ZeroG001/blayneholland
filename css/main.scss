@@ -171,7 +171,6 @@ body {
 	color: rgb(12,165,176);
 	border: 5px solid rgb(12,165,176);
 	padding: 10px;
-	border-radius: 10px;
 	font-size: 1.5em;
 
 	&:hover {
@@ -180,6 +179,7 @@ body {
 	}
 
 }
+
 
 /* =================== End Section 2 ========================= */
 
@@ -242,7 +242,17 @@ body {
 
 
 	p {
-		font-size: 2rem;
+		font-size: 1.5rem;
+	}
+
+	center {
+		padding-top: 30px;
+	}
+
+	center a {
+		border: 2px solid #FEFEEB;
+		padding: 10px;
+
 	}
 }
 
@@ -289,4 +299,12 @@ body {
 
 	}
 
+	
+
+}
+
+@media screen and (max-width: 991px) {
+	.project-item {
+		margin-top: 30px;
+	}
 }
